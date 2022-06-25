@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatsTextManager : MonoBehaviour
+public class GameStats : MonoBehaviour
 {
     public static int LinesCommitted;
     public static int BugsMade;
