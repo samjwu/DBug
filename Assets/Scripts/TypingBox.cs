@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TypingBox : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    InputField _input;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            CommitCode();
+        }
+    }
+
+    void CommitCode()
+    {
+        GameStats.LinesCommitted += _input.text.Length;
+        GameStats.BugsMade += Random.Range(0, _input.text.Length);
+        GameStats.NumberCommits += 1;
     }
 }
