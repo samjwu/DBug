@@ -19,5 +19,7 @@ public class TypingBox : MonoBehaviour
         GameStats.LinesCommitted += _input.text.Length;
         GameStats.BugsMade += Random.Range(0, _input.text.Length);
         GameStats.NumberCommits += 1;
+
+        _input.text = string.Empty;
     }
 }
