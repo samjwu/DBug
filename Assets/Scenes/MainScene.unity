@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 354055711}
   - component: {fileID: 354055712}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: Stats Text Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
