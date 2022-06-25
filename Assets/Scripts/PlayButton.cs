@@ -1,16 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class EndToSplash : MonoBehaviour
+public class PlayButton : MonoBehaviour
 {
-    public GameObject AgainButton;
+    [SerializeField]
+    Button _button;
 
-    public void PlayAgain()
+    void Start()
+    {
+        _button.onClick.AddListener(BeginGame);
+    }
+
+    void BeginGame()
     {
         GameStats.LinesCommitted = 0;
         GameStats.BugsMade = 0;
         GameStats.NumberCommits = 0;
-
         SceneManager.LoadScene(1);
     }
 }
