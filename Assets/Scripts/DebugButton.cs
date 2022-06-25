@@ -16,7 +16,7 @@ public class DebugButton : MonoBehaviour
     void DebugCode()
     {
         int randomInt = Random.Range(1, 10);
-        if (randomInt >= GameStats.BugsMade)
+        if (randomInt <= GameStats.BugsMade)
         {
             _infoText.text = string.Format("You DBugged {0:g} bugs!", randomInt);
             GameStats.BugsMade -= randomInt;
