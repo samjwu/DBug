@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class SubmissionButton : MonoBehaviour
+public class DebugButton : MonoBehaviour
 {
-    public GameObject DebugButton;
-    public GameObject SubmissionName;
+    public GameObject Button;
     public GameObject InfoDisplay;
 
     void Start()

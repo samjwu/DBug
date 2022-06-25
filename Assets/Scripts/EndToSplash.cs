@@ -7,9 +7,9 @@ public class EndToSplash : MonoBehaviour
 
     public void PlayAgain()
     {
-        SubmissionManager.LinesCommitted = 0;
-        SubmissionManager.BugsMade = 0;
-        SubmissionManager.NumberCommits = 0;
+        StatsTextManager.LinesCommitted = 0;
+        StatsTextManager.BugsMade = 0;
+        StatsTextManager.NumberCommits = 0;
 
         SceneManager.LoadScene(1);
     }
