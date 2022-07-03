@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class TypingBox : MonoBehaviour
 {
     [SerializeField]
@@ -8,8 +9,21 @@ public class TypingBox : MonoBehaviour
     [SerializeField]
     Text _infoText;
 
+    AudioSource _audioSource;
+
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
+        bool isMouseClick = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2);
+        if (Input.anyKey && !isMouseClick)
+        {
+            _audioSource.PlayOneShot(_audioSource.clip, _audioSource.volume);
+        }
+
         if (Input.GetKeyUp(KeyCode.Return))
         {
             CommitCode();
