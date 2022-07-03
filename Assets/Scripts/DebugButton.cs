@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class DebugButton : MonoBehaviour
 {
     [SerializeField]
@@ -8,13 +9,18 @@ public class DebugButton : MonoBehaviour
     [SerializeField]
     Text _infoText;
 
+    AudioSource _audioSource;
+
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _button.onClick.AddListener(DebugCode);
     }
 
     void DebugCode()
     {
+        _audioSource.Play();
+
         int randomInt = Random.Range(1, 10);
         if (randomInt <= GameStats.BugsMade)
         {
