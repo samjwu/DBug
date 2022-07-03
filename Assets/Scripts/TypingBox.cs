@@ -18,9 +18,7 @@ public class TypingBox : MonoBehaviour
 
     void Update()
     {
-        bool isMouseClick = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2) ||
-            Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || Input.GetMouseButtonUp(2) ||
-            Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2);
+        bool isMouseClick = Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2);
         if (Input.anyKey && !isMouseClick)
         {
             _audioSource.PlayOneShot(_audioSource.clip, _audioSource.volume);
