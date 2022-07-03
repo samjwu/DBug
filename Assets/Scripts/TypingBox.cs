@@ -18,7 +18,9 @@ public class TypingBox : MonoBehaviour
 
     void Update()
     {
-        bool isMouseClick = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2);
+        bool isMouseClick = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2) ||
+            Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || Input.GetMouseButtonUp(2) ||
+            Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2);
         if (Input.anyKey && !isMouseClick)
         {
             _audioSource.PlayOneShot(_audioSource.clip, _audioSource.volume);
@@ -34,10 +36,12 @@ public class TypingBox : MonoBehaviour
     {
         _infoText.text = string.Format("You committed {0:g} lines of code!", _input.text.Length);
 
-        GameStats.LinesCommitted += _input.text.Length;
-        GameStats.BugsMade += Random.Range(0, _input.text.Length);
-        GameStats.NumberCommits += 1;
+        GameStats.linesCommitted += _input.text.Length;
+        GameStats.bugsMade += Random.Range(0, _input.text.Length);
+        GameStats.numberCommits += 1;
 
-        _input.text = string.Empty;
+        _input.text = "";
+
+        _input.Select();
     }
 }

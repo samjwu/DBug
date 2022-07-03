@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class GameStats : MonoBehaviour
 {
-    public static int LinesCommitted;
-    public static int BugsMade;
-    public static int NumberCommits;
+    public static int linesCommitted;
+    public static int bugsMade;
+    public static int numberCommits;
 
     const float LINES_TO_COMPLETION = 1337;
 
@@ -23,16 +23,16 @@ public class GameStats : MonoBehaviour
 
     void Update()
     {
-        _linesText.text = string.Format("Lines of Code Committed: {0:g}", LinesCommitted);
+        _linesText.text = string.Format("Lines of Code Committed: {0:g}", linesCommitted);
 
-        _bugsText.text = string.Format("Number of Bugs: {0:g}", BugsMade);
+        _bugsText.text = string.Format("Number of Bugs: {0:g}", bugsMade);
 
-        _commitText.text = string.Format("Number of Commits: {0:g}", NumberCommits);
+        _commitText.text = string.Format("Number of Commits: {0:g}", numberCommits);
 
-        _completionPercent = LinesCommitted / LINES_TO_COMPLETION;
+        _completionPercent = linesCommitted / LINES_TO_COMPLETION;
         _completionText.text = string.Format("Project Completion (%): {0:p}", _completionPercent);
 
-        if (LinesCommitted >= LINES_TO_COMPLETION)
+        if (linesCommitted >= LINES_TO_COMPLETION)
         {
             SceneManager.LoadScene(2);
         }

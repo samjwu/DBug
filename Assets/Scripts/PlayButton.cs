@@ -14,9 +14,9 @@ public class PlayButton : MonoBehaviour
 
     void BeginGame()
     {
-        GameStats.LinesCommitted = 0;
-        GameStats.BugsMade = 0;
-        GameStats.NumberCommits = 0;
+        GameStats.linesCommitted = 0;
+        GameStats.bugsMade = 0;
+        GameStats.numberCommits = 0;
         SceneManager.LoadScene(1);
     }
 }

@@ -22,15 +22,15 @@ public class DebugButton : MonoBehaviour
         _audioSource.Play();
 
         int randomInt = Random.Range(1, 10);
-        if (randomInt <= GameStats.BugsMade)
+        if (randomInt <= GameStats.bugsMade)
         {
             _infoText.text = string.Format("You DBugged {0:g} bugs!", randomInt);
-            GameStats.BugsMade -= randomInt;
+            GameStats.bugsMade -= randomInt;
         }
         else
         {
-            _infoText.text = string.Format("You DBugged {0:g} bugs!", GameStats.BugsMade);
-            GameStats.BugsMade = 0;
+            _infoText.text = string.Format("You DBugged {0:g} bugs!", GameStats.bugsMade);
+            GameStats.bugsMade = 0;
         }
     }
 }

@@ -18,6 +18,6 @@ public class BgmVolume : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        Volume = volume;
+        this.Volume = volume;
     }
 }
