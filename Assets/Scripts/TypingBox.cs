@@ -1,26 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 public class TypingBox : MonoBehaviour
 {
     [SerializeField]
     InputField _input;
     [SerializeField]
     Text _infoText;
-
+    [SerializeField]
+    AudioClip _audioClip;
+    [SerializeField]
     AudioSource _audioSource;
-
-    void Start()
-    {
-        _audioSource = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
         bool isMouseClick = Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2);
         if (Input.anyKey && !isMouseClick)
         {
+            _audioSource.clip = _audioClip;
+            _audioSource.volume = 0.25f;
             _audioSource.PlayOneShot(_audioSource.clip, _audioSource.volume);
         }
 

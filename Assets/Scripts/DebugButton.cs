@@ -1,24 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(AudioSource))]
 public class DebugButton : MonoBehaviour
 {
     [SerializeField]
     Button _button;
     [SerializeField]
     Text _infoText;
-
+    [SerializeField]
+    AudioClip _audioClip;
+    [SerializeField]
     AudioSource _audioSource;
 
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
         _button.onClick.AddListener(DebugCode);
     }
 
     void DebugCode()
     {
+        _audioSource.clip = _audioClip;
+        _audioSource.volume = 1f;
         _audioSource.Play();
 
         int randomInt = Random.Range(1, 10);
