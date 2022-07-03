@@ -1108,6 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 694781016}
+  _infoText: {fileID: 1049305183}
 --- !u!114 &694781016
 MonoBehaviour:
   m_ObjectHideFlags: 0
