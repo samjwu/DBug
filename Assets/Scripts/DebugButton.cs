@@ -23,7 +23,7 @@ public class DebugButton : MonoBehaviour
         _audioSource.volume = 1f;
         _audioSource.Play();
 
-        int randomInt = Random.Range(1, 10);
+        int randomInt = Random.Range(1, GameStats.numberCommits);
         if (randomInt <= GameStats.bugsMade)
         {
             _infoText.text = string.Format("You DBugged {0:g} bugs!", randomInt);

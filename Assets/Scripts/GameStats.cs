@@ -36,7 +36,7 @@ public class GameStats : MonoBehaviour
 
         if (linesCommitted >= LINES_TO_COMPLETION)
         {
-            _infoText.text = "Fix your bugs!";
+            _infoText.text = "DBug code to complete the project!";
 
             if (bugsMade == 0)
             {
