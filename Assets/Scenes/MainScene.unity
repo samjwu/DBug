@@ -516,6 +516,7 @@ MonoBehaviour:
   _bugsText: {fileID: 575954001}
   _commitText: {fileID: 179111075}
   _completionText: {fileID: 383582874}
+  _infoText: {fileID: 1049305183}
 --- !u!1 &383582873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,10 +1004,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.020469915, g: 0.8679245, b: 0.05135673, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.11023998, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.011263967, g: 1, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1086,7 +1087,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1

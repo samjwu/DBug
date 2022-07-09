@@ -20,6 +20,8 @@ public class GameStats : MonoBehaviour
     Text _commitText;
     [SerializeField]
     Text _completionText;
+    [SerializeField]
+    Text _infoText;
 
     void Update()
     {
@@ -34,7 +36,12 @@ public class GameStats : MonoBehaviour
 
         if (linesCommitted >= LINES_TO_COMPLETION)
         {
-            SceneManager.LoadScene(2);
+            _infoText.text = "Fix your bugs!";
+
+            if (bugsMade == 0)
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }

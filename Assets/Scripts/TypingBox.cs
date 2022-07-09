@@ -33,11 +33,10 @@ public class TypingBox : MonoBehaviour
         _infoText.text = string.Format("You committed {0:g} lines of code!", _input.text.Length);
 
         GameStats.linesCommitted += _input.text.Length;
-        GameStats.bugsMade += Random.Range(0, _input.text.Length);
+        GameStats.bugsMade += Random.Range(0, _input.text.Length / 2);
         GameStats.numberCommits += 1;
 
         _input.text = "";
-
         _input.Select();
     }
 }
